@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -11,3 +11,9 @@ def index():
 @app.route("/hype/<hype>")
 def hype(hype):
     return f"<h1>You are the best {hype}</h1>"
+
+
+@app.route("/parse_arguments")
+def argument_parsing():
+    args = request.args
+    return args

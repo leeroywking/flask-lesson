@@ -8,6 +8,6 @@ def index():
     return "Hello World!"
 
 
-@app.route("/math/<hype>")
+@app.route("/hype/<hype>")
 def hype(hype):
     return f"<h1>You are the best {hype}</h1>"
